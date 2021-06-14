@@ -12,8 +12,8 @@ void mytolower(char *line){
 }
 
 int main(int argc,char **argv){
-	int fdo = open("old.txt", O_RDWR | O_CREAT);
-	int fdw = open("new.txt", O_RDWR | O_CREAT);
+	int fdo = open(argv[1], O_RDWR | O_CREAT);
+	int fdw = open(argv[2], O_RDWR | O_CREAT);
 	char *r = (char *)calloc(10, sizeof(char));
 	char *w = (char *)calloc(10, sizeof(char));
 	int sz=1;
